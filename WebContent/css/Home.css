@@ -1,0 +1,369 @@
+@CHARSET "windows-1255";
+
+/* html, body { */
+/*     min-height: 100%; */
+/* } */
+
+@font-face {
+    font-family: myExist;
+    src: url(../css/fonts/Existence-Light.otf);
+}
+
+@font-face {
+    font-family: myHemi;
+    src: url(../css/fonts/hemi-head-bd-it.ttf);
+}
+
+#logo{
+	font-family: myHemi;
+	position: absolute;
+    font-size: 27px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+#header{
+	background-color: #555;
+	box-shadow:0 1px 1px #ccc;
+    height: 50px;
+    color: #ffffff;
+	box-sizing: border-box;
+	position: relative;
+    width: 1300px;
+}
+
+@media all and (max-width: 600px) {
+
+	#header {
+		height: 50px;
+	}
+}
+
+li {
+	font-family: myExist;
+}
+
+html, body, #map {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+}
+
+/* body { */
+/*     background-image: url("images/home.jpg"); */
+/*     background-position: 0 0; */
+/*     background-size: cover;  */
+/* } */
+
+#newchip {
+	margin-left: 3%; 
+}
+
+#currChipLabel {
+	margin-left: 78%; 
+}
+
+#addChipForm .selectContainer .form-control-feedback,
+#addChipForm .form-control-feedback {
+    right: -15px;
+}
+
+#map {
+/*   height: 100%;  */
+/*   width: 100%;  */
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 0; 
+}
+
+.notification-icon .glyphicon {
+    color: #fff;
+    font-size: 50px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.badge {
+	font-size: 17px;
+    background-color: #0088bb;
+    border-radius: 100%;
+    float: right;
+    text-align: center;
+    padding: 4px 8px 2px 8px;
+}
+
+#bottomOptionPanel{
+	text-align: center;
+}
+
+.optionImg{
+	width: 40px;
+	height: 40px;
+}
+
+#toolbarOptions{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#dl-menu {
+	top: 45px;
+    left: 3px;
+}
+
+
+#btn-dl-menu {
+	background-color: #5a5a5a;
+	margin-top: -37px;
+    margin-left: 5px;
+}
+
+#ul-dl-menu {
+	background-color: #5a5a5a;
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* battery */
+
+#battery{
+	position: fixed;
+    margin-left: 92.5%;
+    margin-top: 14px;
+    color: #f5f5f5;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+	#battery{
+    	margin-left: 88%;
+	}
+}
+
+@media screen and (max-width: 414px) {
+
+	#battery{
+    	margin-left: 78%;
+	}
+}
+
+@media screen and (max-width: 412px) {
+
+	#battery{
+    	margin-left: 78%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+	#battery{
+    	margin-left: 76%;
+	}
+}
+
+@media screen and (max-width: 360px) {
+
+	#battery{
+    	margin-left: 75%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+
+	#battery{
+    	margin-left: 72%;
+	}
+}
+
+
+.middle, .top-a
+{
+  margin-right: -4px;
+}
+
+
+.middle{
+  border: 1px solid #222;
+  border-radius: 3px;
+  display: inline-block;
+  overflow: hidden;
+  height: 20px;
+  width: 40px;
+  vertical-align: middle;
+}
+
+.top-a{
+  background: #444 linear-gradient(rgba(255,255,255,0.3) 0%, transparent 13%, transparent 20%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.6) 30%, transparent 50%, transparent 75%, rgba(255,255,255,0.5) 90%);
+  border-radius: 3px;
+  display: inline-block;
+  height: 10px;
+  width: 4px;
+  vertical-align: middle;
+}
+
+.glass{
+  background-image: linear-gradient(rgba(255,255,255,0.3) 0%, transparent 10%, transparent 20%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0.25) 20%, transparent 50%, transparent 75%, rgba(255,255,255,0.25) 90%);
+  border-radius: 3px;
+  display: block;
+  height: 20px;
+  position: absolute;
+  width: 40px;
+  z-index: 1
+}
+
+#lev{
+    position: absolute;
+    margin-left: 48px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fill{
+    height: 100px;
+    margin: px ;
+}
+
+#settingImg {
+	width: 25px;
+    float: right;
+    margin-top: -3px;
+}
+
+#logoutImg{
+	width: 27px;
+    float: right;
+    margin-top: -3px;
+}
+
+#routeImg{
+	width: 26px;
+    float: right;
+    margin-top: -4px;
+}
+
+#backImg{
+	width: 28px;
+	float: left;
+	margin-top: -5px;
+    margin-left: -20px;
+    margin-right: 4px;
+}
+
+#forwardImg{
+	margin-top: -3px;
+    width: 28px;
+    float: right;
+}
+
+#startRouteImg{
+	width: 28px;
+	float: right;
+	margin-top: -3px;
+}
+
+#finishRouteImg{
+	width: 28px;
+	float: right;
+	margin-top: -3px;
+}
+
+#clearRouteImg{
+	width: 28px;
+	float: right;
+	margin-top: -4px;
+}
+
+#saveRouteImg{
+	width: 28px;
+	float: right;
+	margin-top: -4px;
+}
+
+#playSimulatorImg{
+	width: 28px;
+	float: right;
+	margin-top: -4px;
+}
+
+#stopSimulatorImg{
+	width: 28px;
+	float: right;
+	margin-top: -4px;
+}
+
+#status{
+	color: #ff3333;
+	font-weight: bold;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 13px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+	#status{
+    	margin-left: 42%;
+    	margin-top: 15px;
+    	font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+
+	#status{
+    	margin-left: 39%;
+    	margin-top: 16px;
+    	font-size: 16px;
+
+	}
+}
+
+@media screen and (max-width: 412px) {
+
+	#status{
+    	margin-left: 40%;
+    	margin-top: 15px;
+    	font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+	#status{
+    	margin-left: 39%;
+    	margin-top: 16px;
+    	font-size: 16px;
+
+	}
+}
+
+@media screen and (max-width: 360px) {
+
+	#status{
+    	margin-left: 40%;
+    	margin-top: 15px;
+    	font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+
+	#status{
+    	margin-left: 41.5%;
+    	margin-top: 18px;
+    	font-size: 13px;
+	}
+}
+
+#routeDetails label {
+	float: none;
+	width: 100%;
+}
