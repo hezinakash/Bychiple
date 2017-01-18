@@ -1,0 +1,1234 @@
+@CHARSET "ISO-8859-1";
+
+/* Settings Dialog*/
+
+@font-face {
+    font-family: myExist;
+    src: url(../css/fonts/Existence-Light.otf);
+}
+
+@font-face {
+    font-family: myHemi;
+    src: url(../css/fonts/hemi-head-bd-it.ttf);
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.settingsLabel{
+	font-family: myExist
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+/*   left: 230px; */
+	float: right;
+	margin-top: -3px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display: none}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 23px;
+  left: 6px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1b68a5;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+#dropdownBtn{
+	width: 140px;
+    text-align: left;
+    font-family: myExist;
+}
+
+@media screen and (max-width: 414px){
+	#dropdownBtn{
+		width: 140px;
+	}
+}
+
+@media screen and (max-width: 412px){
+	#dropdownBtn{
+		width: 140px;
+	}
+}
+
+@media screen and (max-width: 375px){
+	#dropdownBtn{
+		width: 120px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	#dropdownBtn{
+		width: 110px;
+	}
+}
+
+@media screen and (max-width: 320px){
+	#dropdownBtn{
+		width: 110px;
+	}
+}
+
+.caret{
+    top: 14px;
+    float: right;
+    margin-top: 7px;
+}
+
+#menuDown{
+	min-width: 140px;
+	font-family: myExist;
+}
+
+@media screen and (max-width: 414px){
+	#menuDown{
+		min-width: 140px;
+	}
+}
+
+@media screen and (max-width: 412px){
+	#menuDown{
+		min-width: 140px;
+	}
+}
+
+@media screen and (max-width: 375px){
+	#menuDown{
+		min-width: 120px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	#menuDown{
+		min-width: 110px;
+	}
+}
+
+@media screen and (max-width: 320px){
+	#menuDown{
+		min-width: 110px;
+	}
+}
+
+.panel-group .list-group {
+	margin-bottom: 0;
+}
+
+.panel-group .list-group .list-group-item {
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+}
+
+.panel-group .list-group .list-group-item:last-child {
+	border-bottom: none;
+}
+
+.panel .panel-default{
+	width: 200px;
+	border-bottom-color: black;
+}
+
+
+////////FROM SignUp//////
+
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/*--reset--*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/*--start editing from here--*/
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*--end reset--*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url(../css/images/settings_background.jpeg)no-repeat center 0px;
+    background-attachment: fixed;
+	background-size: cover;
+}
+
+@font-face {
+    font-family: myHemi;
+    src: url(../css/fonts/hemi-head-bd-it.ttf);
+}
+
+h1 {
+	font-family: myHemi;
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+}
+/*-- main --*/
+h2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    background: #1b68a5;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 5px; 
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-family: myExist;
+    font-weight: bolder;
+}
+.main {
+    padding: 3em 0 0;
+}
+.login-form {
+    width: 35%;
+    margin: 3.5em auto;
+  	background-color: whitesmoke;
+    padding-bottom: 4em;
+    border-radius: 50px;
+}
+.agileits-top {
+    padding: 3em 3em 3em;
+    margin-top: 22px;
+}
+.login-form input[type="text"], .login-form input[type="password"] {
+    font-size: 1em;
+    color: #fff;
+    padding: 0.8em 1em;
+    border: 0;
+    width: 93%;
+    border-bottom: 1px solid #c7c7c7;
+    background: none;
+    -webkit-appearance: none;
+}
+/*-- input-effect --*/
+.styled-input input:focus ~ label, .styled-input input:valid ~ label {
+    font-size: 1.1em;
+    color: #02a299;
+    top: -2em;
+    -webkit-transition: all 0.125s ease;
+    transition: all 0.125s ease;
+}
+.styled-input {
+  position: relative;
+}
+
+.styled-input label {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 22px;
+    font-weight: bolder;
+    display: block;
+    line-height: 1em;
+    margin-top: 7px;
+}
+.styled-input input ~ span {
+  display: block;
+  width: 0;
+  height:2px;
+  background:#fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.125s ease;
+  transition: all 0.125s ease; 
+}
+
+.styled-input input:focus { outline: 0; }
+
+.styled-input input:focus ~ span {
+     width: 100%;
+    -webkit-transition: all 0.075s ease;
+      transition: all 0.075s ease;
+      font-family: 'OpenSans-Regular';
+} 
+/*-- //input-effect --*/
+.login-form p {
+    font-size: 1em;
+    color: #fff;
+    margin: 1em 0 .5em;
+    text-align: center;
+}
+
+
+/*-- //checkbox --*/
+.wthree-text {
+    margin-top: 3em;
+}
+.wthree-text ul li{
+	display:inline-block;
+	float: left;
+}
+.wthree-text ul li:nth-child(2) {
+    float: right;
+}
+.wthree-text ul li a{
+	font-size:1em;
+    color: #fff;
+}
+.wthree-text ul li a:hover{
+    color: #02a299;
+}
+.agileits-bottom{
+	position:relative;
+}
+.agileits-bottom:before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-right: 18px solid #286090;
+	transition:.5s all ease;
+}
+.agileits-bottom:after {
+    content: '';
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-left: 17px solid #286090;
+    border-top: 17px solid transparent;
+	transition:.5s all ease;
+}
+.agileits-bottom input[type="submit"] {
+    color: white;
+    background: #1b68a5;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    -webkit-appearance: none;
+    border: none;
+    width: 106%; 
+    text-transform: uppercase; 
+    font-size: 22px;
+    font-family: myExist;
+    margin-left: -16px;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+.agileits-bottom input[type="submit"]:hover {
+    color: #FFF;
+    background: #777;
+	transition:.5s all ease;
+}
+.agileits-bottom:hover:before {
+    border-right-color:#777;
+}
+.agileits-bottom:hover:after {
+/* 	border-left-color:#02a299; */
+	border-left-color:#777;
+}
+/*-- //main --*/
+/*-- copyright --*/
+.copyright {
+    margin: 2em 0;
+    text-align: center;
+}
+.copyright p {
+    font-size: 1em;
+    color: #fff;
+	line-height:1.8em;
+}
+.copyright p a{
+    color: #fff; 
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	transition: 0.5s all;
+}
+.copyright p a:hover{
+    color: #000;	
+}
+/*-- //copyright --*/
+/*-- responsive-design --*/
+@media(max-width:1440px){
+.agileits-bottom input[type="submit"] { 
+    width: 106.8%; 
+}
+}
+@media(max-width:1366px){
+.login-form {
+    width: 37%; 
+	margin: 3em auto;
+}
+}
+@media(max-width:1280px){
+.login-form {
+    width: 40%; 
+}
+}
+@media(max-width:1080px){
+.main {
+    padding: 2em 0 0;
+}
+.login-form {
+    width: 48%;
+}
+h1 {
+    font-size: 2.8em; 
+}
+}
+@media(max-width:1024px){
+h1 {
+    font-size: 2.6em;
+}
+.login-form {
+    width: 50%;
+    margin: 2em auto;
+}
+}
+@media(max-width:991px){
+h1 {
+    font-size: 2.5em;
+}
+.login-form {
+    width: 52%; 
+}
+}
+@media(max-width:900px){
+.agileits-top {
+    padding: 1em 3em 3em;
+}
+.login-form { 
+	width: 56%;
+    padding-bottom: 3.5em;
+}
+}
+@media(max-width:800px){
+.login-form {
+    width: 63%;
+    margin-top: 70px; 
+}
+.agileits-top {
+    padding: 1em 2.5em 2.5em;
+}
+.agileits-bottom input[type="submit"] {
+    font-size: 1.3em; 
+    margin-left: -0.8em; 
+}
+}
+@media(max-width:768px){
+h1 {
+    font-size: 2.3em;
+}
+.agileits-bottom input[type="submit"] {
+    width: 107%;
+} 
+} 
+@media (max-width: 736px){
+.agileits-bottom input[type="submit"] {
+    width: 107.5%;
+} 
+} 
+@media(max-width:667px){
+.agileits-bottom input[type="submit"] {
+    width: 108%;
+    font-size: 1.1em;
+    margin-left: -0.9em;
+}
+} 
+@media(max-width:640px){
+.login-form {
+    width: 67%;
+}
+.agileits-bottom input[type="submit"] {
+    width: 108%;
+}
+}
+@media(max-width:600px){
+.agileits-bottom input[type="submit"] {
+    width: 108.7%;
+}
+}
+@media(max-width:480px){
+h1 {
+    font-size: 1.8em;
+}
+h2 {
+    font-size: 1em; 
+    padding: 1em; 
+    letter-spacing: 7px;
+}
+.agileits-top {
+    padding: 1em 1.5em 1.5em;
+}
+.login-form input[type="text"], .login-form input[type="password"] {
+    font-size: 0.9em; 
+    padding: 0.6em 1em; 
+    width: 93%; 
+}
+.styled-input label { 
+    font-size: 14px; 
+    margin-top: 15px;
+    font-family: myExist;
+}
+
+#chipIDlabel{
+	font-family: myExist;
+}
+	
+#nicknameLabel {
+	font-family: myExist;
+}
+	
+@media screen and (max-width: 414px){
+	.styled-input label{
+		font-size: 16px;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 412px){
+	.styled-input label{
+		font-size: 16px;
+	}
+	
+	#nicknameLabel {
+		margin-top: 8px;
+	}
+}
+
+@media screen and (max-width: 375px){
+	#chipIDlabel{
+		font-size: 16px;
+    	margin-top: 8px;
+	}
+	
+	#nicknameLabel {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	#chipIDlabel{
+		font-size: 16px;
+		margin-top: -6px;
+	}
+	
+	#nicknameLabel {
+		font-size: 16px;
+		margin-top: 4px;
+	}
+}
+
+@media screen and (max-width: 320px){
+	#chipIDlabel{
+		font-size: 16px;
+    	margin-left: -10px;
+    	margin-top: -17px;
+	}
+	
+	#nicknameLabel {
+		font-size: 16px;
+    	margin-left: -10px;
+    	margin-top: -6px;
+	}
+}
+
+.styled-input input:focus ~ label, .styled-input input:valid ~ label {
+    font-size: 1em; 
+	top: -1.5em;
+}
+.wthree-text {
+    margin-top: 2em;
+}
+.wthree-text input[type="checkbox"]+label { 
+    font-size: 0.9em; 
+	padding-left: 1.5em;
+}
+.wthree-text input[type="checkbox"]+label span:first-child {
+    width: 12px;
+    height: 12px; 
+}
+.wthree-text ul li a {
+    font-size: 0.9em; 
+}
+.agileits-bottom input[type="submit"] {
+    font-size: 1em;
+    margin-left: -0.6em;
+    width: 105.3%;
+    padding: 0.8em 0;
+}
+.login-form { 
+    padding-bottom: 3em;
+}
+.login-form {
+    width: 80%;
+}
+.copyright p {
+    font-size: 0.9em; 
+}
+.agileits-bottom:before { 
+    top: -11px;
+    left: -11px; 
+    border-top: 11px solid transparent;
+    border-right: 11px solid #fff; 
+}
+.agileits-bottom:after { 
+    top: -11px;
+    right: -11px; 
+    border-left: 11px solid #fff;
+    border-top: 11px solid transparent; 
+}
+.wthree-text input[type="checkbox"]:checked+label span:first-child:before { 
+    left: 1px;
+    top: 1px; 
+}
+}
+@media(max-width:414px){
+.main {
+    padding: 1.5em 0 0;
+}
+.styled-input { 
+    margin: 1.5em 0 1em; 
+}
+.copyright p { 
+    padding: 0 1em;
+}
+.agileits-bottom:before {
+    top: -10px;
+    left: -10px;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #1b68a5;
+}
+.agileits-bottom:after { 
+    top: -10px;
+    right: -10px;
+    border-left: 10px solid #1b68a5;
+    border-top: 10px solid transparent; 
+}
+.agileits-bottom input[type="submit"] { 
+    width: 106%; 
+}
+}
+@media(max-width:384px){
+.agileits-bottom input[type="submit"] {
+    width: 106.8%;
+    font-size: 0.9em;
+    margin-left: -0.7em;
+}
+}
+@media(max-width:375px){
+.agileits-bottom input[type="submit"] {
+    width: 106.5%;
+    margin-left: -0.6em;
+}
+h1 {
+    font-size: 1.6em;
+}
+h2 { 
+    letter-spacing: 5px;
+}
+.login-form { 
+    margin: 2.2em auto;
+}
+.wthree-text ul li { 
+    float: none;
+    display: block;
+}
+.wthree-text ul li:nth-child(2) {
+    float: none;
+    margin-top: 1em;
+}
+.wthree-text {
+    margin-top: 1.5em;
+}
+}
+@media(max-width:320px){
+h2 {
+    letter-spacing: 3px;
+    padding: 0.8em;
+}
+.login-form {
+    width: 85%;
+}
+.agileits-top {
+    padding:0.5em 1em 1.5em;
+}
+.login-form input[type="text"], .login-form input[type="password"] {
+    font-size: 0.85em;
+    padding: 0.6em;
+    width: 88%;
+}
+.styled-input label {
+    padding: 0.6em;
+    font-size: 0.85em;
+}
+.styled-input input:focus ~ label, .styled-input input:valid ~ label {
+    font-size: 0.9em;
+    top: -1em;
+}
+.login-form {
+    padding-bottom: 2em;
+}
+.agileits-bottom input[type="submit"] {
+    width: 107%;
+    margin-left: -0.6em;
+}
+
+.footer-text{
+  color: #ffffff;
+  
+}
+
+#msg{
+  color: white;
+  margin-left: 40px;
+  padding-bottom: 30px;
+  font-size:15px;
+  font-weight: 300;
+  
+}
+
+}
+/*-- //responsive-design --*/
+
+@-webkit-keyframes sk-circleFadeDelay {
+  0%, 39%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}
+
+@keyframes sk-circleFadeDelay {
+  0%, 39%, 100% { opacity: 0; }
+  40% { opacity: 1; } 
+}
+
+.settingsLabel{
+	position: relative;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 414px)
+{
+	.settingsLabel{
+    	font-size: 18px;
+	}
+}
+
+#btnBack{
+	position: relative;
+    left: 10px;
+    font-size: initial;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: myExist;
+    background-color: #1b68a5;
+}
+
+
+/* #addChipLabel{ */
+/*    	font-size: 22px; */
+/*     font-weight: bolder; */
+/*     font-family: myExist; */
+/* } */
+
+/* @media screen (max-width: 600px) */
+/* { */
+/* 	#addChipLabel{ */
+/* 		font-size: 18px; */
+/* 	} */
+/* } */
+
+#addChipCollapse{
+	background: #d4d0d0;
+}
+
+#addChipBtn{
+	margin-top: -3px;
+	margin-right: -12px;
+	float: right;
+	position: relative;
+    height: 27px;
+    border-radius: 15px;
+    background-color: #1b68a5;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+	line-height: 2px;
+}
+
+#panelAddChip{
+	border: none;
+}
+
+#log_chipID{
+	border-color: black;
+    position: relative;
+    border: 1px inset black;
+    height: 30px;
+    background: white;
+    border-radius: 3px;
+    width: 200px;
+    color: black;
+    float:right;
+    margin-right: 10px;
+    font-family: myExist;
+}
+
+#log_nickname{
+	color: black;
+	border-color: black;
+    position: relative;
+    border: 1px inset black;
+    height: 30px;
+    background: white;
+    border-radius: 3px;
+    width: 200px;
+    float:right;
+    margin-right: 10px;
+    font-family: myExist;
+}
+
+@media screen and (max-width: 414px){
+	
+	#log_chipID{
+   	 	width: 130px;
+    	margin-right: -2px;
+	}
+	
+	 #log_nickname{
+   	 	width: 130px;
+    	margin-right: -2px;
+	}
+}
+
+@media screen and (max-width: 412px){
+	
+	#log_chipID{
+   	 	width: 130px;
+    	margin-right: -2px;
+	}
+	
+	 #log_nickname{
+   	 	width: 130px;
+    	margin-right: -2px;
+	}
+}
+
+@media screen and (max-width: 375px){
+	
+	#log_chipID{
+   	 	width: 100px;
+    	margin-right: -2px;
+	}
+	
+	 #log_nickname{
+   	 	width: 100px;
+    	margin-right: -2px;
+	}
+}
+
+
+@media screen and (max-width: 360px){
+	
+	#log_chipID{
+   	 	width: 90px;
+    	margin-right: -2px;
+    	margin-top: -16px;
+	}
+	
+	 #log_nickname{
+   	 	width: 90px;
+    	margin-right: -2px;
+    	margin-top: -5px;
+	}
+}
+
+@media screen and (max-width: 320px){
+	
+	#log_chipID{
+   	 	width: 85px;
+    	margin-right: -2px;
+    	margin-top: -16px;
+	}
+	
+	 #log_nickname{
+   	 	width: 85px;
+    	margin-right: -2px;
+    	margin-top: -5px;
+	}
+}
+
+.panelLabel{
+	color: black;
+	font-size: initial;
+}
+
+#btnGroup{
+	   float: right;
+}
+
+#currChipLabel {
+    top: 5px;
+}
+
+
+#btnAddNewChip{
+	float: right;
+    margin-right: -200px;
+    margin-top: 33px;
+    position: relative;
+    background-color: #1b68a5;
+    border-color: #2e6da4;
+    font-family: myExist;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 414px){
+	#btnAddNewChip{
+		margin-right: -130px;
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 412px){
+	#btnAddNewChip{
+		margin-right: -130px;
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 375px){
+	#btnAddNewChip{
+		margin-right: -100px;
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	#btnAddNewChip{
+		margin-right: -90px;
+    	margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 320px){
+	#btnAddNewChip{
+		margin-right: -85px;
+    	margin-top: 25px;
+	}
+}
+
+#errorMsg{
+    font-weight: 600;
+    color: red;
+    float: left;
+    margin-top: 45px;
+    font-family: myExist;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 414px){
+	#errorMsg{
+    	margin-top: 30px;
+    	font-size: 17px;
+	}
+}
+
+@media screen and (max-width: 412px){
+	#errorMsg{
+    	margin-top: 30px;
+    	font-size: 17px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	#errorMsg{
+    	margin-top: 34px;
+    	font-size: 15px;
+	}
+}
+
+#successMsg{
+	float: left;
+	font-family: myExist;
+    font-size: 22px;
+	margin-left: 12px;
+	color: green;
+}
+
+@media screen and (max-width: 414px){
+	#successMsg{
+    	font-size: 18px;
+	}
+}
+
+#sumbitMsg{
+	margin-left: -8px;
+	float: left;
+	font-family: myExist;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 414px){
+	#sumbitMsg{
+    	font-size: 18px;
+	}
+}
+
+#ElectricDiv{
+	 margin-top: 30px;
+}
+#CurrentChipDiv{
+	 margin-top: 25px;
+}
+
+.add-chip{
+	margin-left: -13px;
+    margin-top: 4px;
+}
+
+#chipIDtext{
+	margin-bottom: 45px;
+	font-family: myExist;
+}
+
+#chipNicknameDiv{
+	margin-top: 55px;
+	font-family: myExist;
+}
+
+@media screen and (max-width: 414px){
+	#chipIDtext{
+		margin-bottom: 45px;
+		margin-top: -2px;
+	}
+	
+	#chipNicknameDiv{
+		margin-top: -8px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	#chipIDtext{
+		margin-bottom: 45px;
+		margin-top: 14px;
+	}
+	
+	#chipNicknameDiv{
+		margin-top: 2px;
+	}
+}
+
+
+/*weight slider*/
+
+$shade-10: #2c3e50 !default;
+$shade-1: #d7dcdf !default;
+$shade-0: #fff !default;
+$teal: #1abc9c !default;
+
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  padding: 60px 20px;
+  
+  @media (min-width: 600px) {
+    padding: 60px;
+  }
+}
+
+$range-width: 100% !default;
+
+$range-handle-color: $shade-10 !default;
+$range-handle-color-hover: $teal !default;
+$range-handle-size: 20px !default;
+
+$range-track-color: $shade-1 !default;
+$range-track-height: 10px !default;
+
+$range-label-color: $shade-10 !default;
+$range-label-width: 60px !default;
+
+.range-slider {
+  width: $range-width;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: calc(100% - (#{$range-label-width + 13px}));
+  height: $range-track-height;
+  border-radius: 10px;
+  background: $range-track-color;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: $range-handle-size;
+    height: $range-handle-size;
+    border-radius: 50%;
+    background: $range-handle-color;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: $range-handle-color-hover;
+    }
+  }
+
+  &:active::-webkit-slider-thumb {
+    background: $range-handle-color-hover;
+  }
+
+  &::-moz-range-thumb {
+    width: $range-handle-size;
+    height: $range-handle-size;
+    border: 0;
+    border-radius: 50%;
+    background: $range-handle-color;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: $range-handle-color-hover;
+    }
+  }
+
+  &:active::-moz-range-thumb {
+    background: $range-handle-color-hover;
+  }
+}
+
+
+.range-slider__value {
+  display: inline-block;
+  position: relative;
+  width: $range-label-width;
+  color: $shade-0;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: $range-label-color;
+
+  &:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid $range-label-color;
+    border-bottom: 7px solid transparent;
+    content: '';
+  }
+}
+
+::-moz-range-track {
+    background: $range-track-color;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer { 
+  border: 0; 
+}
+
+#weightSlider {
+	background-color: #1b68a5;
+	margin-top: 6px;
+}
+
+#weightDiv {
+	margin-top: 30px;
+}
+
+#weightCalComm {
+	font-family: myExist;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 414px){	
+	#weightCalComm {
+	  	font-size: 12px;
+    	margin-top: 7px;
+	}  
+}
