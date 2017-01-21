@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>Home</title>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtm1IjpKkq50cu4XYU6Av2b1ICXkuwIgU&language=en&libraries=places,geometry"></script>
+<script src="script/jquery-2.1.4.min.js"></script>
+<script src="script/bootbox.min.js"></script>
+<script src="modernizr.custom.js"></script>
+<script src="script/jquery.mobile-1.4.5.js"></script>
+<script src="script/jquery.dlmenu.js"></script>
+<script src="script/home.js"></script>
+<script src="script/classie.js"></script>
+<script src="script/bootstrap.min.js"></script>
+<script src="script/smoothscroll.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+<link rel="stylesheet" href="css/jqm-demos.css">
+<link rel="stylesheet" href="css/component.css" />
+<link rel="stylesheet" href="css/Home.css">
+
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond'
+	rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+
+	<!--             <div class="form-group"> -->
+	<!--             	<button id="buttonLogout" type="button" class="btn btn-primary" onclick="logoutUserClicked()" >Logout</button> -->
+	<!--                 <br/><br/> -->
+	<!--                 <label id="currChipLabel">Current chip</label> -->
+	<!--                 <select id="chipsCombobox" class="input-large"></select> -->
+
+	<!--                 <button id="buttonSet" type="button" class="btn btn-primary" onclick="setCurrentChipClicked()" >Set</button> -->
+	<!--             </div> -->
+
+	<!-- 			<button id="buttonAddChip" type="button" class="btn btn-primary" onclick="addChipClicked()">Add Chip</button> -->
+	<!-- 			<br/><br/> -->
+	<!-- 			<div id="newchip" hidden="true"> -->
+	<!-- 				<form id="addChipForm" class="form-horizontal"> -->
+	<!--     				<div class="form-group"> -->
+	<!--         				<label>Chip ID:</label> -->
+	<!--             			<input type="text" id="log_chipID"> -->
+	<!--             			<label>Chip Nickname:</label> -->
+	<!--             			<input type="text" id="log_nickname"> -->
+	<!--             			<button id="btnAddNewChip" type="button" class="btn btn-primary" onclick="addNewChipClicked()">Add</button> -->
+	<!--             			<h4 id ="msg"></h4> -->
+	<!--     				</div> -->
+	<!--     			</form> -->
+	<!-- 			</div> -->
+
+	<!-- 			<button id="msgBox" class="btn btn-primary" type="button" onclick="msgBoxClicked()"> -->
+	<!-- 				<div class="notification-icon"> -->
+	<!-- 					<span class="glyphicon glyphicon-envelope" aria-hidden="true"> -->
+	<!-- 						<span class="badge"></span> -->
+	<!-- 					</span> -->
+	<!-- 				</div> -->
+	<!-- 			</button> -->
+	<!-- 			<br/> -->
+	<!-- 			<button id="btnRoute" type="button" class="btn btn-primary" onclick="btnRouteClicked(this)" >Start Route</button> -->
+	<!-- 			<button id="btnClearRoute" type="button" class="btn btn-primary" onclick="btnClearRouteClicked()" >Clear Route</button> -->
+	<!-- 			<button id="btnSaveRoute" type="button" class="btn btn-primary" onclick="btnSaveRouteClicked(this)" disabled>Save Route</button> -->
+	<!-- 			<h4 id ="msgSaveRoute"></h4> -->
+	<!-- 			<div id="saveRoute" hidden="true"> -->
+	<!-- 				<label>Route Name:</label> -->
+	<!--             	<input type="text" id="routeName"> -->
+	<!--             	<button id="btnDone" type="button" class="btn btn-primary" onclick="btnDoneClicked()" >Done</button> -->
+	<!-- 				<h4 id ="msgNickname"></h4> -->
+	<!-- 			</div> -->
+	<!-- 			<button id="btnRoutesHistory" type="button" class="btn btn-primary" onclick="btnRoutesHistoryClicked()" >Routes history</button> -->
+	<!-- 			<select id="routesCombobox" class="input-large" hidden="true"></select> -->
+
+	<div style="height: 500px; width: 500px;">
+
+		<div id="map"></div>
+
+		<header id="header">
+			<label id="logo">Bychiple</label> <label id="status"></label>
+			<div id="battery">
+				<div class="middle">
+					<span class="glass"></span>
+					<div class="fill">
+						<span id="lev"></span>
+					</div>
+				</div>
+				<div class="top-a"></div>
+			</div>
+		</header>
+
+		<div id="dl-menu" class="dl-menuwrapper">
+			<button id="btn-dl-menu" class="dl-trigger">Open Menu</button>
+			<ul id="ul-dl-menu" class="dl-menu">
+				<li><a href="#" onclick="msgBoxClicked()">Inbox <span
+						class="badge"></span>
+				</a></li>
+				<li id="simulator" value="off"><a href="#" onclick="btnSimulatorClicked()">Play	Simulator
+					<img id="playSimulatorImg" src="css/images/playSimulator_icon.png">
+				</a></li>
+				<li><a href="#">Routes <img id="forwardImg"
+						src="css/images/forward_icon.png">
+				</a>
+					<ul class="dl-submenu">
+						<li><a id="btnRoute" href="#" onclick="btnRouteClicked(this)">Start
+								Route <img id="startRouteImg"
+								src="css/images/startRoute_icon.png">
+						</a></li>
+						<li><a id="btnClearRoute" href="#"
+							onclick="btnClearRouteClicked()">Clear Route <img
+								id="clearRouteImg" src="css/images/clear_icon.png">
+						</a></li>
+						<li><a id="btnSaveRoute" href="#" class="disabled"
+							onclick="btnSaveRouteClicked()">Save Route <img
+								id="saveRouteImg" src="css/images/save_icon.png">
+						</a></li>
+						<li><a id="routesHistory" href="#"
+							onclick="routesHistoryClicked()">Routes History <img
+								id="routeImg" src="css/images/route_icon.png">
+						</a></li>
+					</ul></li>
+				<li><a href="#" onclick="btnSettingsClicked()">Settings <img
+						id="settingImg" src="css/images/settings_icon.png">
+				</a></li>
+				<li><a href="#" onclick="logoutUserClicked()">Logout <img
+						id="logoutImg" src="css/images/logout_icon.png">
+				</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<form id="bottomOptionPanel">
+		<fieldset id="toolbarOptions" data-role="controlgroup"
+			data-type="horizontal">
+			<input type="checkbox" name="checkbox-h-2a" id="repairPlacesCheckBox">
+			<label for="repairPlacesCheckBox"> <img class="optionImg"
+				src="css/images/repair_places.png">
+			</label> <input type="checkbox" name="checkbox-h-2b" id="parkingCheckBox">
+			<label for="parkingCheckBox"> <img class="optionImg"
+				src="css/images/parking.png">
+			</label> <input type="checkbox" name="checkbox-h-2c" id="theftPlacesCheckBox">
+			<label for="theftPlacesCheckBox"> <img class="optionImg"
+				src="css/images/theft_places.png">
+			</label>
+		</fieldset>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="script/jquery-2.1.4.min.js"></script>
+<script src="script/SignUp.js"></script>
+
+<link rel="stylesheet" href="css/SignUp.css">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+
+<title>sign up</title>
+
+</head>
+<body>
+
+<div class="main"> 
+		<h1>Bychiple</h1>
+		<div class="login-form"> 
+			<h2>Sign Up</h2> 
+			<div class="agileits-top">
+					<div class="styled-input">
+						<input type="text" id="log_chipID" name="Chip ID" required/>
+						<label>Chip ID</label>
+						<span></span>
+					</div>
+					<div class="styled-input">
+						<input type="text" id="log_nickname" maxlength="9" name="Chip Nickname" required> 
+						<label>Chip Nickname</label>
+						<span></span>
+					</div> 
+					<div class="styled-input">
+						<input type="text" id="log_fname" name="First Name" required> 
+						<label>First Name</label>
+						<span></span>
+					</div> 
+					<div class="styled-input">
+						<input type="text" id="log_lname" name="Last Name" required> 
+						<label>Last Name</label>
+						<span></span>
+					</div> 
+					<div class="styled-input">
+						<input type="text" id="log_phone" name="Phone Number" required> 
+						<label>Phone Number</label>
+						<span></span>
+					</div> 
+					<div class="styled-input">
+						<input type="text" id="log_email" name="Email" required> 
+						<label>Email</label>
+						<span></span>
+					</div> 
+					<div class="styled-input">
+						<input type="password" id="log_pass" name="Password" required> 
+						<label>Password</label>
+						<span></span>
+					</div> 
+					
+					<br/>
+					<p id="msg"></p>
+
+			</div>
+			
+			<div class="agileits-bottom">
+					<input id="submit" type="submit" onclick="signUpClicked()" value="Sign Up">
+			</div>	
+					
+		</div>	
+	</div>	
+
+</body>
+</html>

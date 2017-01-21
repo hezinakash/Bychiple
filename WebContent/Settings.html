@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+	
+<title>Settings</title>
+
+<script src="script/jquery-2.1.4.min.js"></script>
+<script src="script/bootstrap.js"></script>
+<script src="script/settings.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/Settings.css">
+
+
+</head>
+<body>
+		
+		<div class="login-form"> 
+			<h2>Settings</h2>
+			 
+			<button id="btnBack" type="button" class="btn btn-primary" onclick="onBackBtnClicked()">Back</button>
+			<div class="agileits-top">
+
+				<div>
+					<span class="settingsLabel">Alert By SMS</span>
+					<label id="smsSwitch" class="switch">
+						<input id="smsFlag" type="checkbox">
+						<div class="slider round"></div>
+					</label>
+				</div> 
+				
+				<div id="ElectricDiv">
+					<span  class="settingsLabel">Electric Bicycle</span>
+					<label class="switch">
+						<input id="electricFlag" type="checkbox">
+						<div class="slider round"></div>
+					</label>
+					<div id="weightCalComm">*Turn off for calories calculation</div>
+				</div> 
+				
+				<div id="weightDiv">
+					<span id="weightLabel" class="settingsLabel">Weight: 
+						<span class="range-slider__value">0</span>
+					</span>
+					<div class="range-slider">
+  						<input id="weightSlider" class="range-slider__range" type="range" min="20" max="200">
+					</div>
+				</div>
+				
+				<div id="CurrentChipDiv">
+				<span  id="currChipLabel" class="settingsLabel">Current Chip</span>
+				<div id="btnGroup" class="btn-group"> 
+					<a  id="dropdownBtn" class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a chip 
+						<span id="arrowDown" class="caret"></span>
+					</a>
+            		<ul id="menuDown" class="dropdown-menu">
+<!--                	 <li class="divider"></li> -->
+            		</ul>
+   				</div> </div>
+				<br/>
+				<div class="add-chip">
+   					<div id="panelAddChip" class="panel panel-default">
+   						<div class="panel-heading">
+   							<h4 class="panel-title">
+   								<label class="settingsLabel">Add Chip</label>
+								<button id="addChipBtn" type="button" class="btn btn-primary collapsed" data-toggle="collapse" data-parent="#accordion" href="#addChipCollapse" >+</button>
+							</h4>
+						</div>
+						<div id="addChipCollapse" class="panel-collapse collapse">
+							<div class="panel-body">  
+								<div id="chipIDtext" class="styled-input">
+									<label id="chipIDlabel" class="panelLabel">Chip ID:</label>
+									<input type="text" id="log_chipID" class="logs" onchange="onChangeChipDetails()" 
+										onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();">
+								</div> 
+								<div id="chipNicknameDiv" class="styled-input">
+									<label id="nicknameLabel" class="panelLabel">Chip Nickname:</label>
+									<input type="text" id="log_nickname" class="logs" maxlength="9" onchange="onChangeChipDetails()" 
+										onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();">
+								</div>
+								<br/>
+								<div id="addNewChipDiv">
+								<button id="btnAddNewChip" type="button" class="btn btn-primary" onclick="addNewChipClicked()">Add</button>
+								<h6 id ="errorMsg"></h6>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h6 id ="successMsg"></h6>	
+					<h5 id="sumbitMsg"></h5> 
+				</div>  
+				<br/>
+				
+			</div>
+			
+			<div class="agileits-bottom">
+					<input id="submit" type="submit" onclick="onSubmitBtnClicked()" value="Submit">
+			</div>		
+		</div>
+						<!-- 	<button id="btnSubmit" type="button" class="btn btn-primary" onclick="onSubmitBtnClicked()">Submit</button> -->
+
+		
+		
+		
+<!-- 		<button id="btnBack" type="button" class="btn btn-primary" onclick="onBackBtnClicked()">Back</button>
+<!-- 		<div class="col-xs-12" style="height:20px;"></div> -->
+		
+<!-- 			<div> -->
+<!-- 				<span>Alert By SMS</span> -->
+<!-- 				<label class="switch"> -->
+<!-- 					<input id="smsFlag" type="checkbox"> -->
+<!-- 					<div class="slider round"></div> -->
+<!-- 				</label> -->
+<!-- 			</div> -->
+<!-- 			<div class="col-xs-12" style="height:20px;"></div> -->
+		
+<!-- 			<div> -->
+<!-- 				<span>Electric Bicycle</span> -->
+<!-- 				<label class="switch"> -->
+<!-- 					<input id="electricFlag" type="checkbox"> -->
+<!-- 					<div class="slider round"></div> -->
+<!-- 				</label> -->
+<!-- 			</div> -->
+<!-- 			<div class="col-xs-12" style="height:50px;"></div> -->
+
+	
+<!-- 	<div class="btn-group">  -->
+<!-- 			<a  id="dropdownBtn" class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Select a chip  -->
+<!-- 				<span id="arrowDown" class="caret"></span> -->
+<!-- 			</a> -->
+<!--             <ul id="menuDown" class="dropdown-menu"> -->
+<!-- <!--                 <li class="divider"></li> --> -->
+<!--             </ul> -->
+<!--    </div> -->
+   
+<!--    <div class="col-xs-12" style="height:20px;background-color:white"></div> -->
+   
+<!--    <div class="add-chip"> -->
+<!--    		<div class="panel panel-default"> -->
+<!--    		<div class="panel-heading"> -->
+<!--    			<h4 class="panel-title"> -->
+<!--    				<label>Add Chip</label> -->
+<!-- 				<button id="addChipBtn" data-toggle="collapse" data-parent="#accordion" href="#addChipCollapse">+</button> -->
+<!-- 			</h4> -->
+<!-- 		</div> -->
+<!-- 		<div id="addChipCollapse" class="panel-collapse collapse"> -->
+<!-- 			<div class="panel-body">  -->
+				
+<!-- 				<label>Chip ID:</label> -->
+<!-- 				<input type="text" id="log_chipID" onchange="onChangeChipDetails()"  -->
+<!-- 					onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"> -->
+<!-- 				<br/><br/> -->
+				
+<!-- 				<label>Chip Nickname:</label> -->
+<!-- 				<input type="text" id="log_nickname" onchange="onChangeChipDetails()"  -->
+<!-- 					onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"> -->
+<!-- 				<br/><br/> -->
+				
+<!-- 				<button id="btnAddNewChip" type="button" class="btn btn-primary" onclick="addNewChipClicked()">Add</button> -->
+<!-- 				<h6 id ="errorMsg"></h6> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 		</div> -->
+<!-- 		<h6 id ="successMsg"></h6>	 -->
+<!-- 	</div> -->
+	
+<!-- 	<button id="btnSubmit" type="button" class="btn btn-primary" onclick="onSubmitBtnClicked()">Submit</button> -->
+<!-- 	<h5 id="sumbitMsg"></h5> -->
+	
+	
+</body>
+</html>
